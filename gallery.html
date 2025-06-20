@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shri Mata Vaishno Devi</title>
+    <meta name="description" content="Photo gallery of Mata Vaishno Devi shrine and pilgrimage journey">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-temple fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-om me-2"></i>
+                Mata Vaishno Devi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shrine.html">Shrine Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facilities.html">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yatra.html">Yatra Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4 fw-bold">Photo Gallery</h1>
+                    <p class="lead">Visual journey through the sacred shrine and pilgrimage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <button class="btn btn-outline-temple active me-2 mb-2" data-filter="all">All Photos</button>
+                <button class="btn btn-outline-temple me-2 mb-2" data-filter="temple">Temple</button>
+                <button class="btn btn-outline-temple me-2 mb-2" data-filter="journey">Journey</button>
+                <button class="btn btn-outline-temple me-2 mb-2" data-filter="architecture">Architecture</button>
+                <button class="btn btn-outline-temple me-2 mb-2" data-filter="devotees">Devotees</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="galleryContainer">
+                <!-- Temple Images -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="temple">
+                    <div class="gallery-card">
+                        <img src="assets/images/holy-cave-shrine.jpeg" alt="Mata Vaishno Devi Temple" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Holy Cave Shrine</h5>
+                                <p>The sacred cave where the three Pindies reside</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/holy-cave-shrine.png" data-title="Holy Cave Shrine">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="temple">
+                    <div class="gallery-card">
+                        <img src="assets/images/temple-complex.jpg" alt="Temple Architecture" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Temple Complex</h5>
+                                <p>Beautiful architecture of the shrine complex</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/temple-complex.png" data-title="Temple Complex">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="temple">
+                    <div class="gallery-card">
+                        <img src="assets/images/vaishno-devi-temple.jpg" alt="Temple View" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Sacred Temple</h5>
+                                <p>Divine view of the holy temple</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/vaishno-devi-temple.png" data-title="Sacred Temple">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="temple">
+                    <div class="gallery-card">
+                        <img src="assets/images/yatra-registration.jpeg" alt="Temple Entrance" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Yatra Registration</h5>
+                                <p>Registration counter for pilgrims</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/yatra-registration.png" data-title="Yatra Registration">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Images -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="journey">
+                    <div class="gallery-card">
+                        <img src="assets/images/pilgrimage-path.jpeg" alt="Pilgrimage Journey" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Mountain Trek</h5>
+                                <p>The scenic journey through Trikuta Mountains</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/pilgrimage-path.png" data-title="Mountain Trek">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="journey">
+                    <div class="gallery-card">
+                        <img src="assets/images/vaishno-devi-temple.jpg" alt="Mountain Path" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Sacred Path</h5>
+                                <p>The holy path to the divine destination</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/mountain-view.png" data-title="Sacred Path">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="journey">
+                    <div class="gallery-card">
+                        <img src="assets/images/temple-interior.jpeg" alt="Pilgrimage Route" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Temple Interior</h5>
+                                <p>Beautiful interior of the sacred temple</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/temple-interior.png" data-title="Temple Interior">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Images -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="architecture">
+                    <div class="gallery-card">
+                        <img src="assets/images/temple-complex.jpeg" alt="Temple Architecture" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Ancient Architecture</h5>
+                                <p>Traditional Indian temple architecture</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/temple-complex.png" data-title="Ancient Architecture">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="journey">
+                    <div class="gallery-card">
+                        <img src="assets/images/images.jpeg" alt="Katra Town" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Katra Town</h5>
+                                <p>Beautiful view of Katra town with mountain backdrop</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/katra-town.png" data-title="Katra Town">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="facilities">
+                    <div class="gallery-card">
+                        <img src="assets/images/railway-station.png" alt="Railway Station" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Katra Railway Station</h5>
+                                <p>Shri Mata Vaishno Devi Katra railway station</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/railway-station.png" data-title="Katra Railway Station">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Devotees Images -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="facilities">
+                    <div class="gallery-card">
+                        <img src="assets/images/pilgrimage-path.jpeg" alt="Cable Car Service" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Cable Car Service</h5>
+                                <p>Modern cable car transportation to the shrine</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="assets/images/cable-car.png" data-title="Cable Car Service">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="devotees">
+                    <div class="gallery-card">
+                        <img src="https://pixabay.com/get/g999f4ce9938cbae6a8f35b517b2bebf207cd33a08291e13d729a932768d96fae8b606b5af44d07b5b9685813b01187bfc0d027e08beb4aca913c02e6e466bd7c_1280.jpg" alt="Spiritual Devotion" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Spiritual Devotion</h5>
+                                <p>Expressions of faith and devotion</p>
+                                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://pixabay.com/get/g999f4ce9938cbae6a8f35b517b2bebf207cd33a08291e13d729a932768d96fae8b606b5af44d07b5b9685813b01187bfc0d027e08beb4aca913c02e6e466bd7c_1280.jpg" data-title="Spiritual Devotion">
+                                    <i class="fas fa-expand-alt me-1"></i>View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="imageModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalImage" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-om me-2"></i>Shri Mata Vaishno Devi Shrine Board</h5>
+                    <p class="mb-0">Katra, Reasi, Jammu & Kashmir, India - 182301</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i>+91-1991-232649</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@maavaishnodevi.org</p>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Shri Mata Vaishno Devi Shrine Board. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

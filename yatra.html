@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatra Booking - Shri Mata Vaishno Devi</title>
+    <meta name="description" content="Book your pilgrimage to Mata Vaishno Devi shrine online">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-temple fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-om me-2"></i>
+                Mata Vaishno Devi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shrine.html">Shrine Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facilities.html">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="yatra.html">Yatra Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-4 fw-bold">Yatra Booking</h1>
+                    <p class="lead">Plan your spiritual journey to the holy shrine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Booking Information -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="alert alert-info d-flex align-items-center">
+                        <i class="fas fa-info-circle fa-2x me-3"></i>
+                        <div>
+                            <h5 class="alert-heading">Important Information</h5>
+                            <p class="mb-0">Advance booking is recommended, especially during peak seasons. All bookings are subject to availability and weather conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Booking Form -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-temple text-white">
+                            <h3 class="card-title mb-0"><i class="fas fa-calendar-alt me-2"></i>Book Your Yatra</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <form id="yatraBookingForm" novalidate>
+                                <!-- Personal Information -->
+                                <h5 class="section-title mb-3">Personal Information</h5>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid first name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid last name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email address.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid 10-digit phone number.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age *</label>
+                                        <input type="number" class="form-control" id="age" min="1" max="120" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid age.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Gender *</label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="">Choose...</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select your gender.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Journey Details -->
+                                <h5 class="section-title mb-3">Journey Details</h5>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="visitDate" class="form-label">Preferred Visit Date *</label>
+                                        <input type="date" class="form-control" id="visitDate" required>
+                                        <div class="invalid-feedback">
+                                            Please select a visit date.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="duration" class="form-label">Duration (Days) *</label>
+                                        <select class="form-select" id="duration" required>
+                                            <option value="">Choose...</option>
+                                            <option value="1">1 Day</option>
+                                            <option value="2">2 Days</option>
+                                            <option value="3">3 Days</option>
+                                            <option value="4">4 Days</option>
+                                            <option value="5">5 Days</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select duration.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="groupSize" class="form-label">Group Size *</label>
+                                        <input type="number" class="form-control" id="groupSize" min="1" max="50" value="1" required>
+                                        <div class="invalid-feedback">
+                                            Please provide group size (1-50 people).
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="transportMode" class="form-label">Preferred Transportation</label>
+                                        <select class="form-select" id="transportMode">
+                                            <option value="walking">Walking</option>
+                                            <option value="helicopter">Helicopter</option>
+                                            <option value="pony">Pony/Mule</option>
+                                            <option value="battery-car">Battery Car</option>
+                                            <option value="palanquin">Palanquin</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Accommodation -->
+                                <h5 class="section-title mb-3">Accommodation Preference</h5>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="accommodation" class="form-label">Accommodation Type</label>
+                                        <select class="form-select" id="accommodation">
+                                            <option value="none">No Accommodation Required</option>
+                                            <option value="katra">Katra Base Camp</option>
+                                            <option value="adhkuwari">Adhkuwari</option>
+                                            <option value="bhawan">Bhawan Area</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="roomType" class="form-label">Room Type</label>
+                                        <select class="form-select" id="roomType">
+                                            <option value="dormitory">Dormitory</option>
+                                            <option value="standard">Standard Room</option>
+                                            <option value="deluxe">Deluxe Room</option>
+                                            <option value="suite">Suite</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Special Requirements -->
+                                <h5 class="section-title mb-3">Special Requirements</h5>
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="wheelchair">
+                                        <label class="form-check-label" for="wheelchair">
+                                            Wheelchair accessibility required
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="medicalAssistance">
+                                        <label class="form-check-label" for="medicalAssistance">
+                                            Medical assistance required
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="specialDiet">
+                                        <label class="form-check-label" for="specialDiet">
+                                            Special dietary requirements
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="additionalRequests" class="form-label">Additional Requests</label>
+                                    <textarea class="form-control" id="additionalRequests" rows="3" placeholder="Please mention any special requirements or requests..."></textarea>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="termsConditions" required>
+                                        <label class="form-check-label" for="termsConditions">
+                                            I agree to the <a href="#" class="text-temple">Terms and Conditions</a> and <a href="#" class="text-temple">Privacy Policy</a> *
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree to the terms and conditions.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-temple btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Booking Request
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Information Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0"><i class="fas fa-info-circle me-2"></i>Booking Guidelines</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-temple me-2"></i>Advance booking recommended</li>
+                                <li class="mb-2"><i class="fas fa-check text-temple me-2"></i>Valid ID proof required</li>
+                                <li class="mb-2"><i class="fas fa-check text-temple me-2"></i>Cancellation allowed 48 hours prior</li>
+                                <li class="mb-2"><i class="fas fa-check text-temple me-2"></i>Group discounts available</li>
+                                <li class="mb-2"><i class="fas fa-check text-temple me-2"></i>Weather dependent services</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0"><i class="fas fa-rupee-sign me-2"></i>Price Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-item d-flex justify-content-between mb-2">
+                                <span>Helicopter Service:</span>
+                                <span class="fw-bold">₹1,800 - ₹3,000</span>
+                            </div>
+                            <div class="price-item d-flex justify-content-between mb-2">
+                                <span>Battery Car:</span>
+                                <span class="fw-bold">₹150 - ₹300</span>
+                            </div>
+                            <div class="price-item d-flex justify-content-between mb-2">
+                                <span>Pony/Mule:</span>
+                                <span class="fw-bold">₹800 - ₹1,500</span>
+                            </div>
+                            <div class="price-item d-flex justify-content-between mb-2">
+                                <span>Accommodation:</span>
+                                <span class="fw-bold">₹300 - ₹2,000</span>
+                            </div>
+                            <hr>
+                            <small class="text-muted">*Prices subject to change. Final charges will be confirmed via email.</small>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0"><i class="fas fa-phone me-2"></i>Contact Support</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-2"><strong>Booking Helpline:</strong></p>
+                            <p class="mb-2"><i class="fas fa-phone text-temple me-2"></i>+91-1991-232649</p>
+                            <p class="mb-2"><strong>Email Support:</strong></p>
+                            <p class="mb-2"><i class="fas fa-envelope text-temple me-2"></i>booking@maavaishnodevi.org</p>
+                            <p class="mb-0"><strong>Timings:</strong> 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-temple text-white">
+                    <h5 class="modal-title"><i class="fas fa-check-circle me-2"></i>Booking Submitted</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fas fa-check-circle fa-4x text-success mb-3"></i>
+                    <h4>जय माता दी!</h4>
+                    <p>Your booking request has been submitted successfully. You will receive a confirmation email within 24 hours.</p>
+                    <p><strong>Reference ID:</strong> <span id="referenceId"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-temple" data-bs-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-om me-2"></i>Shri Mata Vaishno Devi Shrine Board</h5>
+                    <p class="mb-0">Katra, Reasi, Jammu & Kashmir, India - 182301</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i>+91-1991-232649</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@maavaishnodevi.org</p>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Shri Mata Vaishno Devi Shrine Board. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
