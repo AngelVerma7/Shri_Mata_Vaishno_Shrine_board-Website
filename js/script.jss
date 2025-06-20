@@ -396,3 +396,57 @@ window.VaishnoDeviWebsite = {
     printPage,
     shareOnSocial
 };
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("yatraBookingForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const requiredFields = [
+        { id: "firstName", label: "First Name" },
+        { id: "lastName", label: "Last Name" },
+        { id: "email", label: "Email" },
+        { id: "phone", label: "Phone" },
+        { id: "age", label: "Age" },
+        { id: "gender", label: "Gender" },
+        { id: "visitDate", label: "Visit Date" }
+      ];
+
+      let isValid = true;
+      let errorMessages = [];
+
+      requiredFields.forEach(field => {
+        const input = document.getElementById(field.id);
+        if (!input || input.value.trim() === "") {
+          isValid = false;
+          errorMessages.push(`${field.label} is required.`);
+        }
+      });
+
+      // ✅ Fix: use the correct ID
+      const checkbox = document.getElementById("termsConditions");
+      if (!checkbox || !checkbox.checked) {
+        isValid = false;
+        errorMessages.push("You must agree to the Terms and Conditions.");
+      }
+
+      if (!isValid) {
+        alert("Please correct the following errors:\n" + errorMessages.join("\n"));
+        return;
+      }
+
+      const modal = new bootstrap.Modal(document.getElementById('successModal'));
+      modal.show();
+
+      const refId = 'YATRA' + Math.floor(Math.random() * 1000000);
+      document.getElementById("referenceId").innerText = refId;
+
+      setTimeout(() => form.reset(), 3000);
+    });
+  });
+</script>
+
