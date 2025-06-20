@@ -92,15 +92,19 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('assets/images/vaishno-devi-temple.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
+  min-height: 100vh;
+  background-color:#8B4513;;
+  /* background: 
+    linear-gradient(rgba(8, 8, 8, 0.4), rgba(0, 0, 0, 0.4)),
+    url('assets/images/vaishno-devi-temple.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
 }
+
+
 
 .hero-overlay {
     width: 100%;
@@ -115,7 +119,8 @@ body {
 /* Page Header */
 .page-header {
     padding: 120px 0 60px;
-    background: var(--temple-gradient);
+    background-color: #8B4513;
+    /* background: var(--temple-gradient); */
     margin-bottom: 0;
 }
 
