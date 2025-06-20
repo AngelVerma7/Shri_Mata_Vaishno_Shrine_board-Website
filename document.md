@@ -52,7 +52,8 @@ Deployment Strategy
 Current Setup
 Development: Python's built-in HTTP server on port 5000
 Production Ready: Simple static file serving suitable for any web server
-No Build Process: Direct deployment of source files without compilation
+No Build Process: Direct dgit add document.md
+Deployment of source files without compilation
 Deployment Options
 Static Hosting: Can be deployed to GitHub Pages, Netlify, or Vercel
 Traditional Web Servers: Apache, Nginx, or any HTTP server
