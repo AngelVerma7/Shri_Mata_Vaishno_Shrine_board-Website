@@ -1,6 +1,20 @@
-🛕 Shri Mata Vaishno Devi Shrine Board – Website Clone
-Project Type: Individual | Tech Stack: HTML, CSS, JavaScript, Bootstrap | Hosted On: GitHub Pages
-🔗 Live Demo | 💻 GitHub Repo
+
+🛕 Shri Mata Vaishno Devi Shrine Board – Responsive Website
+A user-friendly and responsive web project, partially cloned and inspired by the official website: www.maavaishnodevi.org.
+
+The project replicates key sections like:
+
+Shrine Board introduction
+
+Yatra Booking information
+
+Pilgrim Facilities & Gallery
+
+Mobile-friendly design with Bootstrap
+
+Hosted live on GitHub Pages
+
+🔗 Live Project: angelverma7.github.io/Shri_Mata_Vaishno_Shrine_board-Website
 
 📌 Overview
 This is a responsive clone of the official Shri Mata Vaishno Devi Shrine Board website, designed to simulate a real-world, government-backed digital portal for spiritual and logistical pilgrim support. It features multiple pages, structured navigation, and improved user accessibility.
